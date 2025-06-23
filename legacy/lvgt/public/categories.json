@@ -1,0 +1,104 @@
+{
+  "Nightlife": [
+    "Club",
+    "Lounge",
+    "After-Hours"
+  ],
+  "Daylife": [
+    "Brunch",
+    "Pool Club",
+    "Outdoor Lounge"
+  ],
+  "Shows": [
+    "Magic",
+    "Comedy",
+    "Cirque",
+    "Drag",
+    "Adult"
+  ],
+  "Restaurants": [
+    "Fine Dining",
+    "Casual",
+    "Food Truck"
+  ],
+  "Hotels": [
+    "Luxury",
+    "Boutique",
+    "Budget"
+  ],
+  "Services": [
+    "Salon",
+    "Wellness",
+    "Tattoo",
+    "Mobile"
+  ],
+  "Rentals": [
+    "Exotics",
+    "Scooters",
+    "Photographers"
+  ],
+  "Events": [
+    "UFC",
+    "Conventions",
+    "Concerts",
+    "Festivals"
+  ],
+  "Attractions": [
+    "High Roller",
+    "Area15",
+    "Neon Museum"
+  ],
+  "Art": [
+    "Galleries",
+    "Immersive",
+    "Pop-Ups"
+  ],
+  "Culture": [
+    "Chinatown",
+    "Indigenous",
+    "Latinx"
+  ],
+  "Shopping": [
+    "Outlets",
+    "Luxury",
+    "Local Boutiques"
+  ],
+  "Golfing": [
+    "Golf Courses",
+    "Simulators"
+  ],
+  "Strip Clubs": [
+    "Gentlemen’s Clubs",
+    "Revue",
+    "NSFW"
+  ],
+  "VIP Services": [
+    "Concierge",
+    "Hosts",
+    "Bodyguards"
+  ],
+  "Cannabis": [
+    "Dispensaries",
+    "Lounges"
+  ],
+  "Weddings": [
+    "Chapels",
+    "Romance",
+    "Vow Renewals"
+  ],
+  "Tech": [
+    "Startups",
+    "AREA15 Vendors",
+    "Innovation"
+  ],
+  "Tours": [
+    "Helicopter",
+    "Walking",
+    "ATV"
+  ],
+  "Local Gems": [
+    "UNLV Area",
+    "Off-Strip",
+    "East Side"
+  ]
+}

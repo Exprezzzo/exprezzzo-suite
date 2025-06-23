@@ -1,0 +1,16 @@
+{
+  "name": "Las Vegas Good Times",
+  "short_name": "LVGT",
+  "description": "Las Vegas concierge & business discovery PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0A0A0F",
+  "theme_color": "#FFD700",
+  "icons": [
+    {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Welcome_to_Fabulous_Las_Vegas_sign.jpg/192px-Welcome_to_Fabulous_Las_Vegas_sign.jpg",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
