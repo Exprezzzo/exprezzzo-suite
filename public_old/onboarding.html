@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Your Business • LVGT</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white font-inter">
+  <nav class="bg-black bg-opacity-80 backdrop-blur sticky top-0 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-2xl font-extrabold tracking-widest text-yellow-400">LVGT</a>
+      <ul class="flex space-x-4 text-sm md:text-base">
+        <li><a href="vendors.html" class="hover:text-yellow-300">Explore</a></li>
+        <li><a href="onboarding.html" class="text-yellow-300">List Your Biz</a></li>
+        <li><a href="about.html" class="hover:text-yellow-300">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="max-w-xl mx-auto p-6">
+    <h2 class="text-3xl font-bold mb-4">Onboard Your Business</h2>
+    <form id="onboard-form" class="space-y-4">
+      <div>
+        <label class="block mb-1">Business Name</label>
+        <input type="text" name="name" required class="w-full p-2 rounded bg-gray-800 border border-gray-700">
+      </div>
+      <div>
+        <label class="block mb-1">Category</label>
+        <select name="category" class="w-full p-2 rounded bg-gray-800 border border-gray-700">
+          <option value="food">Food</option>
+          <option value="nightlife">Nightlife</option>
+          <option value="shows">Shows</option>
+          <option value="adventure">Adventure</option>
+        </select>
+      </div>
+      <div>
+        <label class="block mb-1">Description</label>
+        <textarea name="description" rows="4" class="w-full p-2 rounded bg-gray-800 border border-gray-700"></textarea>
+      </div>
+      <button type="submit"
+              class="px-6 py-2 rounded bg-yellow-400 text-black font-semibold hover:bg-yellow-300">
+        Submit
+      </button>
+    </form>
+  </section>
+
+  <script src="js/onboarding.js"></script>
+</body>
+</html>
