@@ -1,0 +1,12 @@
+{
+  "projects": {
+    "default": "exprezzzo-sandbox-admin"
+  },
+  "targets": {
+    "exprezzzo-sandbox-admin": {
+      "hosting": {
+        "default": ["exprezzzo-sandbox-admin"]
+      }
+    }
+  }
+}
