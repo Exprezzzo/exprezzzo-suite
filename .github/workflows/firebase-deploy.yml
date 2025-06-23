@@ -1,0 +1,32 @@
+name: Firebase Hosting CI
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install deps
+      run: npm ci
+
+    - name: Build Next.js (static export)
+      run: npm run build      # <-- keeps Vercel build parity
+
+    - name: Deploy to Firebase Hosting
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: "${{ secrets.GITHUB_TOKEN }}"
+        firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
+        channelId: live        # “live” = production
+        projectId: lvmetro-sandbox-pwa   # <-- your Firebase project id
