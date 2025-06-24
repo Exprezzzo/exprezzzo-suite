@@ -1,61 +1,23 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "@/lib/firebase/firebaseConfig";
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
-export default function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [mode, setMode] = useState<"login" | "signup">("login");
+// Lazy-load the LoginForm component without SSR
+const LoginForm = dynamic(() => import('@/components/LoginForm'), {
+  ssr: false,
+  loading: () => <p className="text-center mt-10 text-white">Loading login...</p>,
+});
 
-  const handleSubmit = async () => {
-    try {
-      if (mode === "login") {
-        await signInWithEmailAndPassword(auth, email, password);
-        alert("✅ Logged in!");
-      } else {
-        await createUserWithEmailAndPassword(auth, email, password);
-        alert("✅ Account created!");
-      }
-      setEmail("");
-      setPassword("");
-    } catch (error: any) {
-      alert(`❌ ${error.message}`);
-    }
-  };
-
+export default function LoginPage() {
   return (
-    <div className="max-w-md mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">
-        {mode === "login" ? "Login" : "Sign Up"}
-      </h1>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        className="w-full border px-3 py-2 mb-3 rounded"
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        className="w-full border px-3 py-2 mb-3 rounded"
-      />
-      <button
-        onClick={handleSubmit}
-        className="bg-black text-white w-full py-2 mb-2 rounded"
-      >
-        {mode === "login" ? "Log In" : "Sign Up"}
-      </button>
-      <button
-        onClick={() => setMode(mode === "login" ? "signup" : "login")}
-        className="text-sm text-blue-600 underline w-full text-center"
-      >
-        {mode === "login" ? "Need an account?" : "Already have an account?"}
-      </button>
-    </div>
+    <main className="min-h-screen flex items-center justify-center bg-black text-white">
+      <div className="w-full max-w-md p-6 space-y-4 rounded-xl border border-gray-700 shadow-md">
+        <h1 className="text-3xl font-bold text-center">Sign in to Exprezzzo</h1>
+        <Suspense fallback={<p>Loading form…</p>}>
+          <LoginForm />
+        </Suspense>
+      </div>
+    </main>
   );
 }
