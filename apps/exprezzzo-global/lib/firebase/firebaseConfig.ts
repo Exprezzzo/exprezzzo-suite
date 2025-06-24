@@ -1,18 +1,17 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBTKo8c8fP280W7K32MQRN_Fhq_obkfOVc",
-  authDomain: "exprezzzo-suite.firebaseapp.com",
-  projectId: "exprezzzo-suite",
-  storageBucket: "exprezzzo-suite.firebasestorage.app",
-  messagingSenderId: "72476263764",
-  appId: "1:72476263764:web:8ca9fe728f2980f4b1b4c1"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY!,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN!,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID!,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET!,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID!,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID!,
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-const auth = getAuth(app);
+export const firebaseApp = initializeApp(firebaseConfig);
+export const auth = getAuth(firebaseApp);
 
-export { app, db, auth };
+// ✅ Fix: Add default export for legacy and CI compatibility
+export default firebaseApp;
