@@ -1,16 +1,28 @@
-{
-  "hosting": {
-    "public": "apps/exprezzzo-global/out",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+"hosting": {
+  "source": "apps/exprezzzo-global",
+  "public": ".next",
+  "ignore": ["firebase.json", "**/node_modules/**"],
+  ...
 }
+``` |
+| 4 | **Click "Rerun" on CI** after making the change to confirm the pipeline now succeeds. |
+
+---
+
+### 🧠 Easy Explanation (Like to a Middle Schooler)
+
+- Think of CI as a cookbook that tells your app how to make itself before going live.
+- You added a recipe step ("static export") that doesn’t work anymore—like asking a mixer to do something it can't.
+- CI tries that step every time and fails, blocking the deploy.
+- We just need to **take that bad step out** and CI will finish cooking your app fine.
+
+---
+
+### Next Move
+
+1. I’ll send you the updated version of your `.github/workflows/ci.yml` without the export step.  
+2. You can paste it into GitHub on mobile (Codespaces or GitHub mobile).
+3. Then click **Rerun** on the CI job.  
+4. CI should finish with ✅ and your changes will go live—including your `/admin` route and all mobile-accessible pages.
+
+Let me know when you're ready for that full updated workflow!
