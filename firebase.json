@@ -2,7 +2,7 @@
   "hosting": {
     "public": "apps/exprezzzo-global/out",
     "ignore": [
-      "firebase.json",
+      "firebase": "^10.0.0",
       "**/.*",
       "**/node_modules/**"
     ],
