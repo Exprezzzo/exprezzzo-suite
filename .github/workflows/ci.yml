@@ -1,33 +1,34 @@
 name: Deploy to Firebase
 
 on:
+  pull_request:
+    branches: [main]
   push:
     branches: [main]
 
 jobs:
   deploy:
-    name: Deploy to Firebase Hosting
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
+      - name: Use Node.js 20
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: '20'
 
       - name: Install dependencies
-        run: cd apps/exprezzzo-global && npm ci
+        working-directory: apps/exprezzzo-global
+        run: npm ci
 
-      - name: Build site
-        run: cd apps/exprezzzo-global && npm run build
+      - name: Build project
+        working-directory: apps/exprezzzo-global
+        run: npm run build
 
       - name: Deploy to Firebase Hosting
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT }}"
-          projectId: exprezzzo-suite
-          channelId: live
+        run: |
+          cd ../..  # ensure workspace-root, so firebase.json is found
+          firebase deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
