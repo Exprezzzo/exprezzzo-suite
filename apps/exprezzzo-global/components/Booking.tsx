@@ -1,5 +1,7 @@
 "use client";
-
+<h1 className="text-2xl font-bold mb-4">
+  Book Your Tattoo Experience
+</h1>
 import React, { useState } from "react";
 
 export default function Booking() {
