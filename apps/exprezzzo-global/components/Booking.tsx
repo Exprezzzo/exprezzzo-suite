@@ -1,10 +1,17 @@
 "use client";
 
 import React, { useState } from "react";
+import firebaseApp from "../lib/firebase/firebaseConfig"; // 🔗 Firebase wired
 
 export default function Booking() {
   const [name, setName] = useState("");
   const [service, setService] = useState("Tattoo Session");
+
+  const handleBooking = () => {
+    console.log("Booking confirmed:", { name, service });
+
+    // 🔧 This is where you’ll write to Firestore or call a function later
+  };
 
   return (
     <div className="p-4 max-w-xl mx-auto">
@@ -25,7 +32,10 @@ export default function Booking() {
         <option value="VIP Suite Rental">VIP Suite Rental</option>
         <option value="DJ Gig">DJ Gig</option>
       </select>
-      <button className="bg-black text-white px-6 py-2 rounded w-full">
+      <button
+        onClick={handleBooking}
+        className="bg-black text-white px-6 py-2 rounded w-full"
+      >
         Confirm Booking
       </button>
     </div>
