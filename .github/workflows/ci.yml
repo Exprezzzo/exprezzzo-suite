@@ -2,10 +2,12 @@ name: Deploy to Firebase
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   deploy:
+    name: Deploy to Firebase Hosting
     runs-on: ubuntu-latest
 
     steps:
@@ -17,30 +19,18 @@ jobs:
         with:
           node-version: 20
 
-      - name: Cache node_modules
-        uses: actions/cache@v3
-        with:
-          path: apps/exprezzzo-global/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install dependencies
-        run: npm install
+      - name: Install dependencies (exprezzzo-global)
         working-directory: apps/exprezzzo-global
+        run: npm ci
 
-      - name: Build Next.js
+      - name: Build site (exprezzzo-global)
+        working-directory: apps/exprezzzo-global
         run: npm run build
-        working-directory: apps/exprezzzo-global
-
-      - name: Export static files
-        run: npx next export
-        working-directory: apps/exprezzzo-global
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_RAPTOR_GLOBAL }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_EXPREZZZO_SUITE }}"
           channelId: live
           projectId: exprezzzo-suite
