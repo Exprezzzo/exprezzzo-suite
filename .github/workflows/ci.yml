@@ -1,5 +1,3 @@
-# .github/workflows/ci.yml
-
 name: Deploy to Firebase
 
 on:
@@ -19,10 +17,15 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install dependencies (exprezzzo-global)
         run: npm install
+        working-directory: apps/exprezzzo-global
 
-      - name: Deploy to Firebase
+      - name: Build site (exprezzzo-global)
+        run: npm run build
+        working-directory: apps/exprezzzo-global
+
+      - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
