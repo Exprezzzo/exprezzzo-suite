@@ -17,12 +17,24 @@ jobs:
         with:
           node-version: 20
 
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: apps/exprezzzo-global/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install dependencies (exprezzzo-global)
         run: npm install
         working-directory: apps/exprezzzo-global
 
       - name: Build site (exprezzzo-global)
         run: npm run build
+        working-directory: apps/exprezzzo-global
+
+      - name: Export static files
+        run: npx next export
         working-directory: apps/exprezzzo-global
 
       - name: Deploy to Firebase Hosting
