@@ -1,6 +1,7 @@
 {
   "projects": {
-    "raptor-global": "exprezzzo-suite"
+    "raptor-global": "exprezzzo-suite",
+    "production": "exprezzzo-sandbox-admin"
   },
   "targets": {},
   "etags": {}
