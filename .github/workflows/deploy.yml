@@ -1,14 +1,11 @@
-# File: .github/workflows/deploy.yml
-
 name: Deploy to Firebase Hosting
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -18,15 +15,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
 
-      - name: Install Dependencies & Build
+      - name: Install dependencies
         run: |
           cd apps/exprezzzo-global
           npm ci
+
+      - name: Build the app
+        run: |
+          cd apps/exprezzzo-global
           npm run build
 
-      - name: Deploy to Firebase Hosting
+      - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
