@@ -12,15 +12,8 @@
       "static/chunks/4bd1b696-9a121be019975beb.js",
       "static/chunks/684-a21a9431336e73e0.js",
       "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/css/caaea79d0a036883.css",
+      "static/css/9a09c9610eb56ee8.css",
       "static/chunks/app/layout-f6a3dab28309aeac.js"
-    ],
-    "/eeis/vendor/page": [
-      "static/chunks/webpack-72fe7624ab16f9ad.js",
-      "static/chunks/4bd1b696-9a121be019975beb.js",
-      "static/chunks/684-a21a9431336e73e0.js",
-      "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/chunks/app/eeis/vendor/page-8e622fa1399c51ba.js"
     ],
     "/category/[id]/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
@@ -32,13 +25,6 @@
       "static/chunks/16-3d8f218ff5ee22b2.js",
       "static/chunks/app/category/[id]/page-2a20549fe89c2b68.js"
     ],
-    "/map/page": [
-      "static/chunks/webpack-72fe7624ab16f9ad.js",
-      "static/chunks/4bd1b696-9a121be019975beb.js",
-      "static/chunks/684-a21a9431336e73e0.js",
-      "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/chunks/app/map/page-721d85ff4dd408fe.js"
-    ],
     "/login/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
       "static/chunks/4bd1b696-9a121be019975beb.js",
@@ -46,12 +32,19 @@
       "static/chunks/main-app-36e1f28bd467615b.js",
       "static/chunks/app/login/page-f73286aa48d141c0.js"
     ],
-    "/page": [
+    "/eeis/admin/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
       "static/chunks/4bd1b696-9a121be019975beb.js",
       "static/chunks/684-a21a9431336e73e0.js",
       "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/chunks/app/page-b62d902dc467f2ef.js"
+      "static/chunks/app/eeis/admin/page-cbdfe7e950ea1aa7.js"
+    ],
+    "/eeis/vendor/page": [
+      "static/chunks/webpack-72fe7624ab16f9ad.js",
+      "static/chunks/4bd1b696-9a121be019975beb.js",
+      "static/chunks/684-a21a9431336e73e0.js",
+      "static/chunks/main-app-36e1f28bd467615b.js",
+      "static/chunks/app/eeis/vendor/page-8e622fa1399c51ba.js"
     ],
     "/favorites/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
@@ -60,6 +53,13 @@
       "static/chunks/main-app-36e1f28bd467615b.js",
       "static/chunks/app/favorites/page-2eeef1bc5ff8a65d.js"
     ],
+    "/map/page": [
+      "static/chunks/webpack-72fe7624ab16f9ad.js",
+      "static/chunks/4bd1b696-9a121be019975beb.js",
+      "static/chunks/684-a21a9431336e73e0.js",
+      "static/chunks/main-app-36e1f28bd467615b.js",
+      "static/chunks/app/map/page-721d85ff4dd408fe.js"
+    ],
     "/profile/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
       "static/chunks/4bd1b696-9a121be019975beb.js",
@@ -67,19 +67,12 @@
       "static/chunks/main-app-36e1f28bd467615b.js",
       "static/chunks/app/profile/page-ef44a4d7fcaee614.js"
     ],
-    "/vendor/[id]/page": [
+    "/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
       "static/chunks/4bd1b696-9a121be019975beb.js",
       "static/chunks/684-a21a9431336e73e0.js",
       "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/chunks/app/vendor/[id]/page-031a7e3abc86eca9.js"
-    ],
-    "/eeis/admin/page": [
-      "static/chunks/webpack-72fe7624ab16f9ad.js",
-      "static/chunks/4bd1b696-9a121be019975beb.js",
-      "static/chunks/684-a21a9431336e73e0.js",
-      "static/chunks/main-app-36e1f28bd467615b.js",
-      "static/chunks/app/eeis/admin/page-cbdfe7e950ea1aa7.js"
+      "static/chunks/app/page-b62d902dc467f2ef.js"
     ],
     "/search/page": [
       "static/chunks/webpack-72fe7624ab16f9ad.js",
@@ -97,6 +90,13 @@
       "static/chunks/69806262-b82ca44e85c569d6.js",
       "static/chunks/16-3d8f218ff5ee22b2.js",
       "static/chunks/app/vendor/page-95754f2d84b16007.js"
+    ],
+    "/vendor/[id]/page": [
+      "static/chunks/webpack-72fe7624ab16f9ad.js",
+      "static/chunks/4bd1b696-9a121be019975beb.js",
+      "static/chunks/684-a21a9431336e73e0.js",
+      "static/chunks/main-app-36e1f28bd467615b.js",
+      "static/chunks/app/vendor/[id]/page-031a7e3abc86eca9.js"
     ]
   }
 }

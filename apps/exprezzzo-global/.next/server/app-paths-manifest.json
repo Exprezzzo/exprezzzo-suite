@@ -1,14 +1,14 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/eeis/vendor/page": "app/eeis/vendor/page.js",
   "/category/[id]/page": "app/category/[id]/page.js",
-  "/map/page": "app/map/page.js",
   "/login/page": "app/login/page.js",
-  "/page": "app/page.js",
-  "/favorites/page": "app/favorites/page.js",
-  "/profile/page": "app/profile/page.js",
-  "/vendor/[id]/page": "app/vendor/[id]/page.js",
   "/eeis/admin/page": "app/eeis/admin/page.js",
+  "/eeis/vendor/page": "app/eeis/vendor/page.js",
+  "/favorites/page": "app/favorites/page.js",
+  "/map/page": "app/map/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/page": "app/page.js",
   "/search/page": "app/search/page.js",
-  "/vendor/page": "app/vendor/page.js"
+  "/vendor/page": "app/vendor/page.js",
+  "/vendor/[id]/page": "app/vendor/[id]/page.js"
 }
