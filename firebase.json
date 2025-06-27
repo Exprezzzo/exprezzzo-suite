@@ -1,9 +1,9 @@
 {
   "hosting": {
-    "source": "apps/exprezzzo-global",
-    "ignore": ["firebase.json", "**/node_modules/**"],
-    "frameworksBackend": {
-      "region": "us-central1"
-    }
+    "public": "apps/exprezzzo-global/out" // or your build output
+    "rewrites": [
+      { "source": "**", "destination": "/index.html" }
+    ]
+    // add "cleanUrls": true  if desired
   }
 }
