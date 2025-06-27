@@ -2,7 +2,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { firebaseConfig } from "@/lib/firebase/firebaseConfig";
+import { firebaseApp } from "@/lib/firebase/firebaseConfig";
 
 export default function Booking() {
   const [name, setName] = useState("");
@@ -21,7 +21,7 @@ export default function Booking() {
         className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700"
         onClick={() => {
           console.log(`Booking submitted by ${name}`);
-          // Firebase logic here using firebaseConfig
+          // Firebase usage here, e.g. const db = getFirestore(firebaseApp);
         }}
       >
         Submit Booking
