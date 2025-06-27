@@ -1,9 +1,13 @@
 {
   "hosting": {
-    "public": "apps/exprezzzo-global/out" // or your build output
+    "site": "exprezzzo-sandbox-admin",
+    "public": "apps/exprezzzo-global/.next",
     "rewrites": [
-      { "source": "**", "destination": "/index.html" }
-    ]
-    // add "cleanUrls": true  if desired
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
