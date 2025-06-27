@@ -1,3 +1,11 @@
-﻿export default function VendorDetailPage({ params }: { params: { id: string } }) {
-  return <div className="p-4 text-xl font-bold">Vendor Details for ID: {params.id}</div>;
+﻿// /app/vendor/[id]/page.tsx
+export default async function VendorPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+
+  return (
+    <div className="p-8">
+      <h1 className="text-2xl font-bold">Vendor: {id}</h1>
+      {/* Add actual vendor details here */}
+    </div>
+  );
 }
