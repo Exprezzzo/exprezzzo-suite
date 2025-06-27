@@ -1,9 +1,0 @@
-{
-  "hosting": {
-    "public": "apps/exprezzzo-global/out" // or your build output
-    "rewrites": [
-      { "source": "**", "destination": "/index.html" }
-    ]
-    // add "cleanUrls": true  if desired
-  }
-}
