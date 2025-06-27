@@ -1,0 +1,604 @@
+[debug] [2025-06-25T02:56:58.850Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T02:56:58.857Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T02:56:58.858Z] CLI Version:   14.8.0
+[debug] [2025-06-25T02:56:58.858Z] Platform:      win32
+[debug] [2025-06-25T02:56:58.858Z] Node Version:  v20.19.2
+[debug] [2025-06-25T02:56:58.858Z] Time:          Tue Jun 24 2025 19:56:58 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T02:56:58.858Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T02:56:59.271Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T02:56:59.272Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T02:56:59.272Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T02:56:59.275Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:56:59.275Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:56:59.278Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T02:56:59.278Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T02:56:59.278Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T02:56:59.694Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T02:56:59.695Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T02:56:59.696Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:56:59.696Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:56:59.697Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T02:56:59.946Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T02:56:59.946Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T02:57:03.919Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:03.920Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:03.921Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T02:57:04.799Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T02:57:04.799Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T02:57:04.800Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:04.800Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:04.800Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T02:57:05.406Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T02:57:05.407Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T02:57:05.407Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:05.407Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:05.407Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T02:57:05.887Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T02:57:05.888Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T02:57:15.481Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:15.481Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T02:57:15.482Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T02:57:16.074Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T02:57:16.074Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 7.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/id/page.ts:2:24
+Type error: File 'C:/Users/Owner/Desktop/exprezzzo-suite/apps/exprezzzo-global/app/vendor/id/page.tsx' is not a module.
+
+  1 | // File: C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\app\vendor\id\page.tsx
+> 2 | import * as entry from '../../../../../app/vendor/id/page.js'
+    |                        ^
+  3 | import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
+  4 |
+  5 | type TEntry = typeof import('../../../../../app/vendor/id/page.js')
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T02:57:39.724Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T03:05:03.409Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T03:05:03.415Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T03:05:03.416Z] CLI Version:   14.8.0
+[debug] [2025-06-25T03:05:03.416Z] Platform:      win32
+[debug] [2025-06-25T03:05:03.416Z] Node Version:  v20.19.2
+[debug] [2025-06-25T03:05:03.417Z] Time:          Tue Jun 24 2025 20:05:03 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T03:05:03.417Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T03:05:03.777Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T03:05:03.778Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T03:05:03.778Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T03:05:03.780Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:03.780Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:03.782Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T03:05:03.782Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T03:05:03.783Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:05:04.077Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T03:05:04.077Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:05:04.078Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:04.078Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:04.078Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:05:04.341Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:05:04.341Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T03:05:08.269Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:08.269Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:08.270Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T03:05:09.140Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:05:09.141Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:05:09.141Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:09.141Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:09.142Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T03:05:09.600Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:05:09.600Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:05:09.600Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:09.600Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:09.601Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T03:05:10.111Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T03:05:10.111Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T03:05:19.316Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:19.316Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:05:19.317Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:05:19.955Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:05:19.955Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 4.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/id/page.ts:2:24
+Type error: File 'C:/Users/Owner/Desktop/exprezzzo-suite/apps/exprezzzo-global/app/vendor/id/page.tsx' is not a module.
+
+  1 | // File: C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\app\vendor\id\page.tsx
+> 2 | import * as entry from '../../../../../app/vendor/id/page.js'
+    |                        ^
+  3 | import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
+  4 |
+  5 | type TEntry = typeof import('../../../../../app/vendor/id/page.js')
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T03:05:39.931Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T03:16:46.473Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T03:16:46.478Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T03:16:46.478Z] CLI Version:   14.8.0
+[debug] [2025-06-25T03:16:46.479Z] Platform:      win32
+[debug] [2025-06-25T03:16:46.479Z] Node Version:  v20.19.2
+[debug] [2025-06-25T03:16:46.479Z] Time:          Tue Jun 24 2025 20:16:46 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T03:16:46.479Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T03:16:46.847Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T03:16:46.847Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T03:16:46.848Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T03:16:46.849Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:46.850Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:46.851Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T03:16:46.851Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T03:16:46.852Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:16:47.284Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T03:16:47.284Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:16:47.285Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:47.285Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:47.286Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:16:47.742Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:16:47.742Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T03:16:51.601Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:51.601Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:51.602Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T03:16:52.510Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:16:52.511Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:16:52.512Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:52.512Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:52.512Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T03:16:53.051Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:16:53.051Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:16:53.051Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:53.051Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:16:53.051Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T03:16:53.409Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T03:16:53.409Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T03:17:03.615Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:17:03.616Z] Checked if tokens are valid: true, expires at: 1750822840029
+[debug] [2025-06-25T03:17:03.616Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:17:04.211Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:17:04.211Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 5.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T03:17:27.087Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T03:34:02.437Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T03:34:02.443Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T03:34:02.444Z] CLI Version:   14.8.0
+[debug] [2025-06-25T03:34:02.444Z] Platform:      win32
+[debug] [2025-06-25T03:34:02.444Z] Node Version:  v20.19.2
+[debug] [2025-06-25T03:34:02.445Z] Time:          Tue Jun 24 2025 20:34:02 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T03:34:02.445Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T03:34:02.834Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T03:34:02.835Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T03:34:02.835Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T03:34:02.837Z] Checked if tokens are valid: false, expires at: 1750822840029
+[debug] [2025-06-25T03:34:02.838Z] Checked if tokens are valid: false, expires at: 1750822840029
+[debug] [2025-06-25T03:34:02.838Z] > refreshing access token with scopes: []
+[debug] [2025-06-25T03:34:02.842Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-25T03:34:02.842Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T03:34:03.118Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-25T03:34:03.118Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T03:34:03.154Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T03:34:03.154Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T03:34:03.154Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:34:03.488Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T03:34:03.489Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:34:03.490Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:03.490Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:03.491Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:34:03.755Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:34:03.755Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T03:34:07.649Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:07.649Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:07.650Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T03:34:08.516Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:34:08.517Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:34:08.517Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:08.518Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:08.518Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T03:34:08.978Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:34:08.978Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:34:08.979Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:08.979Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:08.979Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T03:34:09.479Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T03:34:09.479Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T03:34:18.676Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:18.676Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:34:18.676Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:34:19.343Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:34:19.343Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 5.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/id/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T03:34:41.153Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T03:51:18.728Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T03:51:18.733Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T03:51:18.734Z] CLI Version:   14.8.0
+[debug] [2025-06-25T03:51:18.734Z] Platform:      win32
+[debug] [2025-06-25T03:51:18.734Z] Node Version:  v20.19.2
+[debug] [2025-06-25T03:51:18.734Z] Time:          Tue Jun 24 2025 20:51:18 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T03:51:18.734Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T03:51:19.144Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T03:51:19.145Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T03:51:19.145Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T03:51:19.148Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:19.148Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:19.150Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T03:51:19.151Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T03:51:19.151Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:51:19.443Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T03:51:19.444Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T03:51:19.445Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:19.446Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:19.446Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:51:19.701Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:51:19.701Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T03:51:23.662Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:23.662Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:23.663Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T03:51:24.516Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:51:24.516Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:51:24.517Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:24.517Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:24.517Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T03:51:25.063Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T03:51:25.064Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T03:51:25.064Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:25.064Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:25.064Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T03:51:25.452Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T03:51:25.452Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T03:51:34.700Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:34.700Z] Checked if tokens are valid: true, expires at: 1750826042118
+[debug] [2025-06-25T03:51:34.700Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T03:51:35.283Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T03:51:35.283Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 5.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/id/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T03:51:56.662Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T05:37:11.474Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T05:37:11.482Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T05:37:11.484Z] CLI Version:   14.8.0
+[debug] [2025-06-25T05:37:11.485Z] Platform:      win32
+[debug] [2025-06-25T05:37:11.485Z] Node Version:  v20.19.2
+[debug] [2025-06-25T05:37:11.485Z] Time:          Tue Jun 24 2025 22:37:11 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T05:37:11.485Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T05:37:11.949Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T05:37:11.951Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T05:37:11.951Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T05:37:11.954Z] Checked if tokens are valid: false, expires at: 1750826042118
+[debug] [2025-06-25T05:37:11.955Z] Checked if tokens are valid: false, expires at: 1750826042118
+[debug] [2025-06-25T05:37:11.955Z] > refreshing access token with scopes: []
+[debug] [2025-06-25T05:37:11.957Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-25T05:37:11.958Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T05:37:12.234Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-25T05:37:12.235Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T05:37:12.281Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T05:37:12.281Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T05:37:12.282Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T05:37:12.496Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T05:37:12.496Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T05:37:12.497Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:12.498Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:12.498Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T05:37:12.811Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T05:37:12.811Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T05:37:17.419Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:17.420Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:17.422Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T05:37:18.388Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T05:37:18.388Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T05:37:18.389Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:18.389Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:18.390Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T05:37:18.845Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T05:37:18.845Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T05:37:18.846Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:18.846Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:18.846Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T05:37:19.178Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T05:37:19.178Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T05:37:29.505Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:29.506Z] Checked if tokens are valid: true, expires at: 1750833431236
+[debug] [2025-06-25T05:37:29.506Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T05:37:30.085Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T05:37:30.085Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 22.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/[id]/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T05:38:38.402Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2025-06-25T19:21:09.828Z] ----------------------------------------------------------------------
+[debug] [2025-06-25T19:21:09.843Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-25T19:21:09.844Z] CLI Version:   14.8.0
+[debug] [2025-06-25T19:21:09.844Z] Platform:      win32
+[debug] [2025-06-25T19:21:09.844Z] Node Version:  v20.19.2
+[debug] [2025-06-25T19:21:09.844Z] Time:          Wed Jun 25 2025 12:21:09 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-25T19:21:09.845Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-25T19:21:10.488Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-25T19:21:10.488Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-25T19:21:10.489Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-25T19:21:10.492Z] Checked if tokens are valid: false, expires at: 1750833431236
+[debug] [2025-06-25T19:21:10.492Z] Checked if tokens are valid: false, expires at: 1750833431236
+[debug] [2025-06-25T19:21:10.493Z] > refreshing access token with scopes: []
+[debug] [2025-06-25T19:21:10.495Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-06-25T19:21:10.496Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T19:21:10.800Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-06-25T19:21:10.801Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-06-25T19:21:10.857Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-25T19:21:10.858Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-25T19:21:10.858Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T19:21:11.206Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-25T19:21:11.207Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-25T19:21:11.208Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:11.208Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:11.208Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T19:21:11.530Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T19:21:11.530Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-25T19:21:23.444Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:23.444Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:23.447Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-25T19:21:24.338Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T19:21:24.339Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T19:21:24.340Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:24.340Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:24.340Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-25T19:21:24.867Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-25T19:21:24.868Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-25T19:21:24.868Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:24.869Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:24.869Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-25T19:21:25.439Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-25T19:21:25.440Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 15.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-25T19:21:37.173Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:37.173Z] Checked if tokens are valid: true, expires at: 1750882869801
+[debug] [2025-06-25T19:21:37.174Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-25T19:21:37.806Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-25T19:21:37.806Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info]  ✓ Compiled successfully in 10.0s
+
+[info]    Linting and checking validity of types ...
+
+[info] Failed to compile.
+
+
+[info] .next/types/app/vendor/[id]/page.ts:34:29
+Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 'PageProps'.
+  Types of property 'params' are incompatible.
+    Type '{ id: string; }' is missing the following properties from type 'Promise<any>': then, catch, finally, [Symbol.toStringTag]
+
+  32 |
+  33 | // Check the prop type of the entry function
+> 34 | checkFields<Diff<PageProps, FirstArg<TEntry['default']>, 'default'>>()
+     |                             ^
+  35 |
+  36 | // Check the arguments and return type of the generateMetadata function
+  37 | if ('generateMetadata' in entry) {
+
+[info] Next.js build worker exited with code: 1 and signal: null
+
+[debug] [2025-06-25T19:22:38.262Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
