@@ -753,3 +753,100 @@ Type error: Type '{ params: { id: string; }; }' does not satisfy the constraint 
 [debug] [2025-06-27T20:59:12.315Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\export-marker.json'
 [error] 
 [error] Error: An unexpected error has occurred.
+[debug] [2025-06-27T21:15:14.781Z] ----------------------------------------------------------------------
+[debug] [2025-06-27T21:15:14.786Z] Command:       C:\nvm4w\nodejs\node.exe C:\nvm4w\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2025-06-27T21:15:14.787Z] CLI Version:   13.11.2
+[debug] [2025-06-27T21:15:14.787Z] Platform:      win32
+[debug] [2025-06-27T21:15:14.787Z] Node Version:  v20.19.2
+[debug] [2025-06-27T21:15:14.787Z] Time:          Fri Jun 27 2025 14:15:14 GMT-0700 (Pacific Daylight Time)
+[debug] [2025-06-27T21:15:14.788Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-27T21:15:14.890Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-27T21:15:14.891Z] > authorizing via signed-in user (sbejayp@gmail.com)
+[debug] [2025-06-27T21:15:14.891Z] [iam] checking project exprezzzo-sandbox-admin for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2025-06-27T21:15:14.894Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions [none]
+[debug] [2025-06-27T21:15:14.894Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions x-goog-quota-user=projects/exprezzzo-sandbox-admin
+[debug] [2025-06-27T21:15:14.895Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-27T21:15:15.183Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions 200
+[debug] [2025-06-27T21:15:15.184Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/exprezzzo-sandbox-admin:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2025-06-27T21:15:15.185Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-27T21:15:15.521Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin 200
+[debug] [2025-06-27T21:15:15.521Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin {"projectId":"exprezzzo-sandbox-admin","projectNumber":"20702644028","displayName":"exprezzzo-sandbox-admin","name":"projects/exprezzzo-sandbox-admin","resources":{"hostingSite":"exprezzzo-sandbox-admin"},"state":"ACTIVE","etag":"1_f3776d94-1930-411f-9384-0aeca7b13ade"}
+[debug] [2025-06-27T21:15:19.368Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites pageToken=&pageSize=10
+[debug] [2025-06-27T21:15:20.230Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-27T21:15:20.230Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-27T21:15:20.231Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 
+[debug] [2025-06-27T21:15:20.823Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites 200
+[debug] [2025-06-27T21:15:20.823Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites {"sites":[{"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-06-27T21:15:20.823Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config [none]
+[debug] [2025-06-27T21:15:21.186Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config 200
+[debug] [2025-06-27T21:15:21.187Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/webApps/-/config {"projectId":"exprezzzo-sandbox-admin","storageBucket":"exprezzzo-sandbox-admin.firebasestorage.app","apiKey":"AIzaSyC7G5StdGU_uAMVrh6_j32EoVcT9bQfX3k","authDomain":"exprezzzo-sandbox-admin.firebaseapp.com","messagingSenderId":"20702644028"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+   The integration is known to work with Next.js version 12 - 14.0. You may encounter errors.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[debug] [2025-06-27T21:15:29.774Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin [none]
+[debug] [2025-06-27T21:15:30.398Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin 200
+[debug] [2025-06-27T21:15:30.398Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin {"name":"projects/exprezzzo-sandbox-admin/sites/exprezzzo-sandbox-admin","defaultUrl":"https://exprezzzo-sandbox-admin.web.app","type":"DEFAULT_SITE"}
+[info]    ▲ Next.js 15.3.4
+
+[info] 
+
+[info]    Creating an optimized production build ...
+
+[info] Failed to compile.
+
+
+[info] ./app/vendor/[id]/page.tsx
+Error:   x Merge conflict marker encountered.
+   ,-[C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\app\vendor\[id]\page.tsx:1:1]
+ 1 | <<<<<<< HEAD
+   : ^^^^^^^
+ 2 | ﻿// /app/vendor/[id]/page.tsx
+ 3 | export default async function VendorPage({ params }: { params: Promise<{ id: string }> }) {
+ 3 |   const { id } = await params;
+   `----
+  x Merge conflict marker encountered.
+    ,-[C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\app\vendor\[id]\page.tsx:11:1]
+  8 |       <h1 className="text-2xl font-bold">Vendor: {id}</h1>
+  9 |     </div>
+ 10 |   );
+ 11 | =======
+    : ^^^^^^^
+ 12 | export default function VendorDetailPage({ params }: { params: { id: string } }) {
+ 13 |   return <div className="p-4 text-xl font-bold">Vendor ID: {params.id}</div>;
+ 13 | >>>>>>> 324489924674523f7393a1111b8319cfd592f4d3
+    `----
+  x 'import', and 'export' cannot be used outside of module code
+    ,-[C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\app\vendor\[id]\page.tsx:11:1]
+  8 |           <h1 className="text-2xl font-bold">Vendor: {id}</h1>
+  9 |         </div>
+ 10 |       );
+ 11 | ,-> =======
+ 12 | `-> export default function VendorDetailPage({ params }: { params: { id: string } }) {
+ 13 |       return <div className="p-4 text-xl font-bold">Vendor ID: {params.id}</div>;
+ 14 |     >>>>>>> 324489924674523f7393a1111b8319cfd592f4d3
+ 15 |     }
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/vendor/[id]/page.tsx
+
+
+[info] 
+
+[info] > Build failed because of webpack errors
+
+[debug] [2025-06-27T21:15:39.444Z] Error: ENOENT: no such file or directory, open 'C:\Users\Owner\Desktop\exprezzzo-suite\apps\exprezzzo-global\.next\server\middleware-manifest.json'
+[error] 
+[error] Error: An unexpected error has occurred.
