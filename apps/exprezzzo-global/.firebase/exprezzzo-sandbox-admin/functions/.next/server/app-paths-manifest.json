@@ -1,0 +1,14 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/category/[id]/page": "app/category/[id]/page.js",
+  "/eeis/vendor/page": "app/eeis/vendor/page.js",
+  "/eeis/admin/page": "app/eeis/admin/page.js",
+  "/favorites/page": "app/favorites/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/map/page": "app/map/page.js",
+  "/profile/page": "app/profile/page.js",
+  "/search/page": "app/search/page.js",
+  "/vendor/[id]/page": "app/vendor/[id]/page.js",
+  "/vendor/page": "app/vendor/page.js"
+}

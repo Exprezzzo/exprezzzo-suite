@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export", // ⬅️ This enables `next export`
+  reactStrictMode: true,
+  swcMinify: true,
+  images: {
+    domains: ['firebasestorage.googleapis.com'],
+  },
 };
 
 module.exports = nextConfig;

@@ -1,8 +1,21 @@
 {
   "projects": {
-    "raptor-global": "exprezzzo-suite",
-    "production": "exprezzzo-sandbox-admin"
+    "default": "exprezzzo-sandbox-admin"
   },
-  "targets": {},
+  "targets": {
+    "exprezzzo-sandbox-admin": {
+      "hosting": {
+        "admin-suite": [
+          "exprezzzo-sandbox-admin"
+        ],
+        "lvgt-pwa": [
+          "lvgt-web-mobile"
+        ],
+        "eis-intel": [
+          "eis-intel-web"
+        ]
+      }
+    }
+  },
   "etags": {}
 }
