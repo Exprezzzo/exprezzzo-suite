@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --logo-border-glow-color: #FFD700;
+  --logo-text-glow-color: #D40000;
+}
