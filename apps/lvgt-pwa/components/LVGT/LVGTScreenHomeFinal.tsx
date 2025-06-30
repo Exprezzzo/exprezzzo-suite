@@ -1,45 +1,57 @@
 // File: apps/lvgt-pwa/components/LVGT/LVGTScreenHomeFinal.tsx
+"use client";
+
 import React from "react";
-import { Hotel, Plane, Car, Calendar } from "lucide-react";
+import { Building2, Plane, Car, CalendarDays } from "lucide-react";
 
-const tileStyle = {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  margin: "16px",
-};
-
-const labelStyle = {
-  fontSize: "16px",
-  marginTop: "8px",
-};
-
-const containerStyle = {
-  padding: "24px",
-  fontFamily: "Arial, sans-serif",
-};
-
-const titleStyle = {
-  fontSize: "28px",
-  fontWeight: "bold",
-  marginBottom: "20px",
-};
+function Tile({ icon, label }: { icon: React.ReactElement; label: string }) {
+  return (
+    <div
+      style={{
+        background: "#1A1A20",
+        color: "white",
+        padding: "16px",
+        borderRadius: "16px",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        margin: "8px",
+        transition: "0.3s",
+        width: "100px",
+      }}
+    >
+      <div style={{ marginBottom: "8px" }}>{icon}</div>
+      <div style={{ fontSize: "14px", textAlign: "center" }}>{label}</div>
+    </div>
+  );
+}
 
 export default function LVGTScreenHomeFinal() {
   return (
-    <div style={containerStyle}>
-      <div style={titleStyle}>🎉 Welcome to Las Vegas Good Times</div>
-      <div style={{ display: "flex", flexWrap: "wrap" }}>
-        <div style={tileStyle}><Hotel /><div style={labelStyle}>Hotels</div></div>
-        <div style={tileStyle}><Plane /><div style={labelStyle}>Flights</div></div>
-        <div style={tileStyle}><Car /><div style={labelStyle}>Rental Cars</div></div>
-        <div style={tileStyle}><Calendar /><div style={labelStyle}>Shows</div></div>
-        <div style={tileStyle}><Calendar /><div style={labelStyle}>Clubs</div></div>
-        <div style={tileStyle}><Calendar /><div style={labelStyle}>Events</div></div>
+    <div
+      style={{
+        background: "black",
+        minHeight: "100vh",
+        padding: "24px",
+        color: "white",
+        fontFamily: "sans-serif",
+      }}
+    >
+      <h1 style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "24px" }}>
+        🎉 Welcome to Las Vegas Good Times
+      </h1>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
+        <Tile icon={<Building2 />} label="Hotels" />
+        <Tile icon={<Plane />} label="Flights" />
+        <Tile icon={<Car />} label="Rental Cars" />
+        <Tile icon={<CalendarDays />} label="Shows" />
+        <Tile icon={<CalendarDays />} label="Clubs" />
+        <Tile icon={<CalendarDays />} label="Events" />
       </div>
-      <div style={{ marginTop: "32px", fontSize: "12px" }}>
+      <footer style={{ marginTop: "48px", fontSize: "12px", color: "gray" }}>
         © 2025 Las Vegas Good Times. All rights reserved.
-      </div>
+      </footer>
     </div>
   );
 }
