@@ -1,4 +1,4 @@
-# Ignore all node_modules
-node_modules/
-apps/*/node_modules/
-functions/node_modules/
+**/node_modules/
+**/.next/
+**/out/
+**/.firebase/
