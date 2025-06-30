@@ -1,3 +1,7 @@
+// File: apps/lvgt-pwa/pages/index.tsx
+import React from "react";
+import LVGTScreenHomeFinal from "../components/LVGT/LVGTScreenHomeFinal";
+
 export default function Home() {
-  return <h1>🎉 Welcome to Las Vegas Good Times</h1>;
+  return <LVGTScreenHomeFinal />;
 }
