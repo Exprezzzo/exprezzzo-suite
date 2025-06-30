@@ -1,6 +1,5 @@
-// File: apps/lvgt-pwa/pages/index.tsx
 import React from "react";
-import LVGTScreenHomeFinal from "../components/LVGT/LVGTScreenHomeFinal";
+import LVGTScreenHomeFinal from "../components/LVGTScreenHomeFinal";
 
 export default function Home() {
   return <LVGTScreenHomeFinal />;
