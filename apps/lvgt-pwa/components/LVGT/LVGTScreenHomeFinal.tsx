@@ -1,22 +1,28 @@
-// File: apps/lvgt-pwa/components/LVGT/LVGTHeroBanner.tsx
-'use client'
-import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react';
+import { collection, getDocs } from 'firebase/firestore';
+import { db } from '@/lib/firebase';
+import { Card } from '@/components/ui/card';
 
-export default function LVGTHeroBanner() {
+export default function VendorTiles() {
+  const [vendors, setVendors] = useState([]);
+
+  useEffect(() => {
+    const fetchVendors = async () => {
+      const querySnapshot = await getDocs(collection(db, 'vendors'));
+      const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+      setVendors(data);
+    };
+    fetchVendors();
+  }, []);
+
   return (
-    <motion.h1
-      className="text-4xl md:text-6xl font-extrabold text-center mb-4 text-white drop-shadow-md"
-      initial={{ opacity: 0.5, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        repeat: Infinity,
-        repeatType: 'mirror',
-        duration: 1.8,
-        ease: 'easeInOut',
-      }}
-    >
-      <span className="text-red-600">LAS VEGAS</span>{' '}
-      <span className="text-yellow-400">GOOD TIMES</span>
-    </motion.h1>
-  )
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 p-4">
+      {vendors.map(vendor => (
+        <Card key={vendor.id} className="p-4 bg-white shadow-md hover:shadow-lg transition rounded-xl">
+          <h3 className="text-lg font-bold text-gray-900 mb-2">{vendor.name}</h3>
+          <p className="text-sm text-gray-600">{vendor.description}</p>
+        </Card>
+      ))}
+    </div>
+  );
 }
