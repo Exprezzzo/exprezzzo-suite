@@ -1,4 +1,30 @@
+@"
+# Node / Environment
+node_modules/
 **/node_modules/
+.env
+.env.local
+.env.*.local
+*.log
+
+# Build outputs
+.next/
 **/.next/
+out/
 **/out/
-**/.firebase/
+dist/
+build/
+
+# Firebase local
+.firebase/
+.firebaserc
+firebase-debug.log
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+"@ | Out-File -FilePath .gitignore -Encoding UTF8
