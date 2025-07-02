@@ -1,11 +1,6 @@
-// apps/lvgt-pwa/pages/index.tsx
-import LVGTHeroBanner from '@/components/LVGT/LVGTHeroBanner'
+// File: apps/lvgt-pwa/pages/index.tsx
+import LVGTScreenHomeFinal from '../components/LVGT/LVGTScreenHomeFinal';
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-background text-white px-4 py-6">
-      <LVGTHeroBanner />
-      {/* Rest of layout */}
-    </div>
-  )
+  return <LVGTScreenHomeFinal />;
 }

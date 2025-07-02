@@ -8,11 +8,11 @@
         "admin-suite": [
           "exprezzzo-sandbox-admin"
         ],
-        "lvgt-pwa": [
-          "lvgt-web-mobile"
-        ],
         "eis-intel": [
           "eis-intel-web"
+        ],
+        "lvgt-web-mobile": [
+          "lvgt-web-mobile"
         ]
       }
     }
