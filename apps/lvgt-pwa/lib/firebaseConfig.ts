@@ -1,14 +1,28 @@
-import { initializeApp } from 'firebase/app';
+// apps/lvgt-pwa/lib/firebaseConfig.ts
+import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "your-api-key",
-  authDomain: "exprezzzo-sandbox-admin.firebaseapp.com",
-  projectId: "exprezzzo-sandbox-admin",
-  storageBucket: "exprezzzo-sandbox-admin.appspot.com",
-  messagingSenderId: "your-sender-id",
-  appId: "your-app-id"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
+  throw new Error('[Firebase] Missing .env.local config');
+}
+
+let firebaseApp: FirebaseApp;
+
+try {
+  firebaseApp = getApp();
+} catch {
+  firebaseApp = initializeApp(firebaseConfig);
+}
+
+const db = getFirestore(firebaseApp);
+
+export { firebaseApp as app, db };
