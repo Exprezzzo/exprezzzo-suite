@@ -1,0 +1,42 @@
+{
+  "collections": {
+    "users": {
+      "description": "Exprezzzo platform users",
+      "fields": {
+        "uid": "string",
+        "email": "string",
+        "displayName": "string",
+        "role": "admin | user | guest",
+        "projects": ["projectId"],
+        "subscription": {
+          "plan": "free | pro | enterprise",
+          "status": "active | canceled",
+          "expiresAt": "timestamp"
+        }
+      }
+    },
+    "projects": {
+      "description": "LVGT, EIS, and custom projects",
+      "fields": {
+        "id": "string",
+        "name": "string",
+        "type": "lvgt | eis | exprezzzo | custom",
+        "owner": "userId",
+        "settings": "object",
+        "createdAt": "timestamp"
+      }
+    },
+    "ai_sessions": {
+      "description": "AI interaction history",
+      "fields": {
+        "sessionId": "string",
+        "userId": "string",
+        "projectId": "string",
+        "model": "claude | gemini | openai",
+        "messages": "array",
+        "totalTokens": "number",
+        "createdAt": "timestamp"
+      }
+    }
+  }
+}

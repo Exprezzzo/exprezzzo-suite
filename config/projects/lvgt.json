@@ -1,0 +1,11 @@
+{
+  "name": "Las Vegas Good Times",
+  "id": "lvgt-pwa",
+  "color": "#ff4d4f",
+  "firebaseProjectId": "exprezzzo-lvgt",
+  "features": [
+    "pwa",
+    "booking",
+    "ai-concierge"
+  ]
+}

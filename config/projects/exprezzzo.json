@@ -1,0 +1,11 @@
+{
+  "name": "Exprezzzo Global",
+  "id": "exprezzzo-global",
+  "color": "#00c46a",
+  "firebaseProjectId": "exprezzzo-sandbox-admin",
+  "features": [
+    "multi-tenant",
+    "white-label",
+    "ai-orchestration"
+  ]
+}

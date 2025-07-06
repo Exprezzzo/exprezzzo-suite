@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.enable": true,
+  "prettier.requireConfig": true,
+  "files.exclude": {
+    "**/node_modules": true,
+    "**/out": true,
+    "**/.next": true
+  }
+}

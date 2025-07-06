@@ -1,0 +1,11 @@
+{
+  "name": "EIS Admin",
+  "id": "eis-intel",
+  "color": "#007bff",
+  "firebaseProjectId": "exprezzzo-eis",
+  "features": [
+    "dashboard",
+    "analytics",
+    "admin-users"
+  ]
+}
