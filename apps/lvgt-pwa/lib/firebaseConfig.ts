@@ -1,5 +1,5 @@
 // apps/lvgt-pwa/lib/firebaseConfig.ts
-import { initializeApp, getApps, getApp, FirebaseApp } from 'firebase/app';
+import { initializeApp, getApp, getApps } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
@@ -15,14 +15,7 @@ if (!firebaseConfig.apiKey || !firebaseConfig.projectId) {
   throw new Error('[Firebase] Missing .env.local config');
 }
 
-let firebaseApp: FirebaseApp;
-
-try {
-  firebaseApp = getApp();
-} catch {
-  firebaseApp = initializeApp(firebaseConfig);
-}
-
+const firebaseApp = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(firebaseApp);
 
 export { firebaseApp as app, db };

@@ -26,6 +26,12 @@
       "regex": "^/404(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/404(?:/)?$"
+    },
+    {
+      "page": "/eeis/admin",
+      "regex": "^/eeis/admin(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/eeis/admin(?:/)?$"
     }
   ],
   "dataRoutes": [],

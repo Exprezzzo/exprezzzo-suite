@@ -1,24 +1,21 @@
-@"
 # Node / Environment
 node_modules/
-**/node_modules/
 .env
 .env.local
-.env.*.local
+.env.*
 *.log
 
 # Build outputs
 .next/
-**/.next/
 out/
-**/out/
 dist/
 build/
+.cache/
 
-# Firebase local
-.firebase/
-.firebaserc
+# Firebase local files
 firebase-debug.log
+firebase.json
+.firebaserc
 
 # IDEs
 .vscode/
@@ -27,4 +24,6 @@ firebase-debug.log
 # OS files
 .DS_Store
 Thumbs.db
-"@ | Out-File -FilePath .gitignore -Encoding UTF8
+
+# Emulators / vault
+.vault/

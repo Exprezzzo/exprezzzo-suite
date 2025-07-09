@@ -5,9 +5,6 @@
   "targets": {
     "exprezzzo-sandbox-admin": {
       "hosting": {
-        "admin-suite": [
-          "exprezzzo-sandbox-admin"
-        ],
         "eis-intel": [
           "eis-intel-web"
         ],
