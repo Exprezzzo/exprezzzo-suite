@@ -1,0 +1,7 @@
+{
+  "hosting": {
+    "target": "lvgt-web-mobile",
+    "public": "out",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  }
+}
