@@ -1,0 +1,28 @@
+// /exprezzzo-suite/ai/webllm/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exprezzzo WebLLM Chat</title>
+  <script src="https://webllm.mlc.ai/webllm.min.js"></script>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #fff; padding: 2rem; }
+    input, button { padding: 0.5rem; font-size: 1rem; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Las Vegas Concierge</h1>
+  <div id="chat"></div>
+  <input id="userInput" placeholder="Ask anything..." />
+  <button onclick="ask()">Send</button>
+
+  <script>
+    const chat = document.getElementById('chat');
+    async function ask() {
+      const input = document.getElementById('userInput').value;
+      const response = await webllm.chat(input);
+      chat.innerHTML += `<p><b>You:</b> ${input}</p><p><b>VegasBot:</b> ${response}</p>`;
+    }
+  </script>
+</body>
+</html>
