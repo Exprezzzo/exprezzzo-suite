@@ -1,29 +1,22 @@
-# Node / Environment
-node_modules/
+# Environment files
 .env
-.env.local
 .env.*
-*.log
+.env.local
+.env.production
+.env.vault
 
-# Build outputs
+# Node
+node_modules/
+# Build
 .next/
 out/
 dist/
 build/
-.cache/
-
-# Firebase local files
-firebase-debug.log
-firebase.json
-.firebaserc
-
-# IDEs
+# Firebase
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+# OS/IDE
+.DS_Store
 .vscode/
 .idea/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Emulators / vault
-.vault/
