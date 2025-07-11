@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "target": "lvgt-web-mobile",
+      "site": "exprezzzo-global-ui",
       "public": "apps/pwa/out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
       "headers": [
