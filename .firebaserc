@@ -10,6 +10,9 @@
         ],
         "lvgt-web-mobile": [
           "lvgt-web-mobile"
+        ],
+        "webllm-ui": [
+          "exprezzzo-sandbox-admin"
         ]
       }
     }
