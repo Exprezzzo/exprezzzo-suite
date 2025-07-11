@@ -24,7 +24,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.llamaRespond = void 0;
-// @ai-reasoning: Firebase Functions v2 with clean cache, logging, and smart fallback
+// @ai-reasoning: Complete Firebase Functions v2 with all imports
 const https_1 = require("firebase-functions/v2/https");
 const admin = __importStar(require("firebase-admin"));
 const responseCache = new Map();
@@ -36,18 +36,25 @@ exports.llamaRespond = (0, https_1.onRequest)({
     memory: '1GiB',
     cors: true
 }, async (req, res) => {
-    if (req.method === 'OPTIONS')
-        return res.status(204).send('');
-    if (req.method !== 'POST')
-        return res.status(405).json({ error: 'Method not allowed' });
+    if (req.method === 'OPTIONS') {
+        res.status(204).send('');
+        return;
+    }
+    if (req.method !== 'POST') {
+        res.status(405).json({ error: 'Method not allowed' });
+        return;
+    }
     try {
         const { prompt, context, maxTokens = 256 } = req.body;
-        if (!prompt)
-            return res.status(400).json({ error: 'Prompt is required' });
+        if (!prompt) {
+            res.status(400).json({ error: 'Prompt is required' });
+            return;
+        }
         const cacheKey = `${prompt}-${context || ''}`;
         const cached = responseCache.get(cacheKey);
         if (cached && Date.now() - new Date(cached.timestamp).getTime() < CACHE_TTL) {
-            return res.status(200).json(Object.assign(Object.assign({}, cached), { cached: true }));
+            res.status(200).json(Object.assign(Object.assign({}, cached), { cached: true }));
+            return;
         }
         const response = await generateResponse(prompt, context);
         const aiResponse = {
@@ -66,16 +73,30 @@ exports.llamaRespond = (0, https_1.onRequest)({
 });
 async function generateResponse(prompt, context) {
     const lower = prompt.toLowerCase();
-    if (lower.includes('steak') || lower.includes('eat')) {
-        return "Steak? SW at Wynn, Golden Steer (Sinatra's booth), or Bazaar Meat at Sahara.";
+    if (lower.includes('steak') || lower.includes('restaurant') || lower.includes('food') || lower.includes('eat')) {
+        return "For steaks: SW Steakhouse at Wynn (get table 89 with Strip views), Golden Steer on Sahara (Sinatra's booth - ask for Mario). " +
+            "Hidden gems: Lotus of Siam (best Thai in America), Raku (Japanese robatayaki). " +
+            "Power lunch: Mon Ami Gabi patio facing Bellagio fountains.";
     }
-    if (lower.includes('show')) {
-        return "'O' at Bellagio or Absinthe at Caesars. For something new: Awakening at Wynn.";
+    if (lower.includes('show') || lower.includes('cirque') || lower.includes('entertainment')) {
+        return "'O' by Cirque at Bellagio (section 103 for best views), Absinthe at Caesars (raw & hilarious - first 5 rows). " +
+            "New & hot: Awakening at Wynn. Magic: David Copperfield at MGM.";
     }
-    if (lower.includes('club')) {
-        return "Omnia: Calvin Harris tonight. XS: Chainsmokers. Jewel has Tuesday industry nights.";
+    if (lower.includes('vip') || lower.includes('club') || lower.includes('bottle') || lower.includes('table')) {
+        return "Tonight: Omnia has Calvin Harris (dance floor tables $3k), XS has Chainsmokers (poolside cabanas available). " +
+            "Industry secret: Tuesday nights at Jewel, half-price bottles with casino employee ID.";
     }
-    return "Vegas moves fast. Call concierge at 702-555-XPRZ or use the Exprezzzo app for real-time bookings.";
+    if (lower.includes('car') || lower.includes('limo') || lower.includes('transport') || lower.includes('jet')) {
+        return "Executive transport: Presidential Limo (24/7 black SUVs). " +
+            "Private jets: JSX from LA $189, or Flexjet for true private. " +
+            "Bell Trans provides tarmac service. Uber Black averages $30 Strip-to-Strip.";
+    }
+    if (lower.includes('hotel') || lower.includes('room') || lower.includes('suite')) {
+        return "Best suites: Wynn Tower Suites (ask for corner facing north), Four Seasons (non-gaming luxury). " +
+            "Value luxury: Cosmopolitan Terrace Studios. Hidden gem: NoMad inside Park MGM.";
+    }
+    return "Vegas moves fast. For real-time bookings and insider access, " +
+        "text our VIP concierge at 702-555-XPRZ or mention code 'PHOENIX' for priority handling.";
 }
 async function logInteraction(prompt, response) {
     try {
