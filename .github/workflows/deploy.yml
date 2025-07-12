@@ -1,34 +1,18 @@
-name: Deploy to Firebase Hosting
-
+name: Firebase Hosting Deploy
 on:
   push:
-    branches: [main]
-
+    branches:
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Use Node.js 20
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with: node-version: 20
+      - run: npm ci && npm run build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          node-version: '20'
-
-      - name: Install dependencies
-        run: |
-          cd apps/exprezzzo-global
-          npm ci
-
-      - name: Build the app
-        run: |
-          cd apps/exprezzzo-global
-          npm run build
-
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-          projectId: exprezzzo-sandbox-admin
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
+          channelId: live  # use 'preview' for pull requests
